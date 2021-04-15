@@ -32,18 +32,20 @@ CalculatorMono.prototype.nextToken = function () {
 		this.consume();
 		return '**';
             }
-	} 
-        else {
-	    return '*';
+	
+            else {
+	        return '*';
+            }
 	}
 	else if (this.c === '-') {
 	    if (this.isNumber(this.input[this.p + 1])) {
 	        // Negatif Sayılar için Gerekli Bölüm
 	        return this.number();
+            
+	    }
+            else {
+	        return '-';
             }
-	}
-        else {
-	    return '-';
 	}
 	else if (this.isNumber(this.c)) {
 	    return this.number();
