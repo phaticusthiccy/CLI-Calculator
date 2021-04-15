@@ -31,14 +31,16 @@ CalculatorMono.prototype.nextToken = function () {
 	    if (this.c === '*') {
 		this.consume();
 		return '**';
+            }
 	} 
         else {
 	    return '*';
 	}
 	else if (this.c === '-') {
 	    if (this.isNumber(this.input[this.p + 1])) {
-	    // Negatif Sayılar için Gerekli Bölüm
-	    return this.number();
+	        // Negatif Sayılar için Gerekli Bölüm
+	        return this.number();
+            }
 	}
         else {
 	    return '-';
