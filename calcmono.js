@@ -66,7 +66,7 @@ CalculatorMono.prototype.isCharacter = function (c) {
 }
 
 CalculatorMono.prototype.isNumber = function (d) {
-    return /^[0-9.]$/.test(d);
+    return /^[0-9.]/.test(d);
 }
 
 CalculatorMono.prototype.symbol = function () {
