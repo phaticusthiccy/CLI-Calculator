@@ -22,12 +22,12 @@ rl.on('line', function (line) {
 		}
 		console.log("=> ", CalculatorDi.evaluate(tokens, env));
 	} catch (e) {
-		console.log("Hata!: \n\n", e);
+		console.log("Error!: \n\n", e);
 	}
 	rl.prompt();
 }).on('SIGINT', function () {
 	rl.close();
 }).on('close', function () {
-	console.log('Görüşmek Üzere :)');
+	console.log('Byeee :)');
 	process.exit(0);
 });
